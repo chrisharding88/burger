@@ -1,0 +1,19 @@
+{
+  "name": "burger",
+  "version": "1.3.7",
+  "description": "Creating our own burger",
+  "main": "server.js",
+  "scripts": {
+    "test": " \"\\\"echo \\\\\\\"Error: no test specified\\\\\\\" && exit 1\\\",\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisharding88/burger.git"
+  },
+  "author": "Christopher Harding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisharding88/burger/issues"
+  },
+  "homepage": "https://github.com/chrisharding88/burger#readme"
+}
