@@ -21,7 +21,7 @@ function objectToMySQL (obj) {
             }
             // e.g. {name: 'Bacon Cheeseburger'} => ["name='Bacon Cheeseburger'"]
             // e.g. {devoured: true} => ["devoured=true"]
-            arr.push(key + "=" + value);
+            arr.push(`${key} = ${value}`);
         }
     }
 
@@ -44,7 +44,7 @@ var orm ={
         insertQuery += "VALUES (";
         insertQuery += printQuestionMarks(vals.length);
         insertQuery += ") ";
-
+     
     console.log(insertQuery);
     connection.query(insertQuery, vals, function(err,res){
         if (err) throw err;
