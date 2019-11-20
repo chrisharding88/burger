@@ -1,13 +1,13 @@
 var connection = require("../config/connection.js");
 
 function printQuestionMarks(num) {
-    var arr = [];
+    var array = [];
   
     for (var i = 0; i < num; i++) {
-      arr.push("?");
+      array.push("?");
     }
   
-    return arr.toString();
+    return array.toString();
   }
 
 function objectToMySQL (obj) {
@@ -21,7 +21,7 @@ function objectToMySQL (obj) {
             }
             // e.g. {name: 'Bacon Cheeseburger'} => ["name='Bacon Cheeseburger'"]
             // e.g. {devoured: true} => ["devoured=true"]
-            arr.push(`${key} = ${value}`);
+            array.push(`${key} = ${value}`);
         }
     }
 
@@ -72,7 +72,7 @@ var orm ={
         deleteString += " WHERE ";
         deleteString += condition;
     
-        connection.query(queryString, function(err, result) {
+        connection.query(deleteString, function(err, result) {
           if (err) throw err;
         
     
