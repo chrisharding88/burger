@@ -1,0 +1,24 @@
+body{
+    background-color:#ffe70d ;
+    text-align: center;
+    font-family: 'jumble', sans-serif; 
+    font-weight: 400; 
+    font-style: normal; 
+}
+
+
+h1{
+    font-size: 45px;
+}
+
+h2{
+    font-size:40px;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 30px;
+}
+form{
+    font-size: 30px;
+}
