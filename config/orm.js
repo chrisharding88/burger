@@ -15,6 +15,7 @@ function objectToMySQL (obj) {
 
     for (var key in obj){
         if (Object.hasOwnProperty.call(obj, key)) {
+          var value = obj[key]
             // if string with spaces, add quotations (Bacon Cheeseburger => 'Bacon Cheeseburger')
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
               value = "'" + value + "'";
@@ -71,6 +72,7 @@ var orm ={
         var deleteString = `DELETE FROM ${table}`;
         deleteString += " WHERE ";
         deleteString += condition;
+        console.log(deleteString)
     
         connection.query(deleteString, function(err, result) {
           if (err) throw err;
